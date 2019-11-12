@@ -3,12 +3,15 @@
 
 ## Dev
 `dotnet build`  
+`CD blazor-workbox-pwa`  
 `xcopy wwwroot\* .\bin\Debug\netstandard2.0\dist /Y /E`  
 `workbox generateSW workbox-dev-config.js`  
-`dotnet run`   
+`dotnet watch --project aspnetcore-prerendering\aspnetcore-prerendering.csproj run `   
 
 ## Prod
 `dotnet publish -c Release`  
 `workbox generateSW workbox-config.js`  
+`CD .\aspnetcore-prerendering\bin\Release\netcoreapp3.0\publish\`  
+`dotnet aspnetcore-prerendering.dll`
 
 > Box by Rockicon from the Noun Project
