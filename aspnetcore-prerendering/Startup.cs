@@ -17,6 +17,11 @@ namespace aspnetcore_prerendering
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddResponseCompression(opts =>
+            {
+                opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
+                    new[] { "application/octet-stream" });
+            });
             services.AddScoped<HttpClient>(s =>
             {
                 var navigationManager = s.GetRequiredService<NavigationManager>();
@@ -30,6 +35,8 @@ namespace aspnetcore_prerendering
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseResponseCompression();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
