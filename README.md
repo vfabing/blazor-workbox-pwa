@@ -14,4 +14,8 @@
 `CD .\aspnetcore-prerendering\bin\Release\netcoreapp3.0\publish\`  
 `dotnet aspnetcore-prerendering.dll`
 
+## MSBuild integration
+https://docs.microsoft.com/en-us/visualstudio/msbuild/target-build-order?view=vs-2019
+https://docs.microsoft.com/en-us/visualstudio/msbuild/exec-task?view=vs-2019
+
 > Box by Rockicon from the Noun Project

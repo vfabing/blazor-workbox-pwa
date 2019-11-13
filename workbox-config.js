@@ -3,5 +3,5 @@ module.exports = {
     "globPatterns": [
         '**/*.{html,json,js,css,png,ico,json,wasm,dll}'
     ],
-    "swDest": "aspnetcore-prerendering/bin/Release/netcoreapp3.0/publish/blazor-workbox-pwa/dist/sw.js"
+    "swDest": "aspnetcore-prerendering/obj/Release/netcoreapp3.0/PubTmp/Out/blazor-workbox-pwa/dist/sw.js"
 };

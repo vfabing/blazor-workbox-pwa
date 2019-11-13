@@ -14,4 +14,9 @@
   <ItemGroup>
     <ProjectReference Include="..\blazor-workbox-pwa\blazor-workbox-pwa.csproj" />
   </ItemGroup>
+  
+  <Target Name="ExecuteWorkbox" BeforeTargets="BundlePublishDirectory">
+    <Message Importance="high" Text="Running ExecuteWorkbox..." />
+    <Exec Command="workbox generateSW workbox-config.js" WorkingDirectory="$(SolutionDir)"/>
+  </Target>
 </Project>
